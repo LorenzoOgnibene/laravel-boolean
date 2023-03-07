@@ -42,6 +42,9 @@ export default {
 <template>
     <div class="container">
         <div class="row">
+            <h1 class="text-focus-in py-4 text-center">
+                Book List
+            </h1>
             <BookComponent v-for="book in store.books" :book="book" class="col-5" />
         </div>
     </div>
