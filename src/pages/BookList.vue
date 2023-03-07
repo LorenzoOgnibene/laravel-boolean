@@ -1,12 +1,13 @@
 <script>
 import axios from 'axios';
 import { store } from '../store';
+import BookComponent from '../components/BookComponent.vue'
 
 export default {
     name: 'BookList',
 
     components: {
-
+        BookComponent
     },
 
     data() {
@@ -39,6 +40,11 @@ export default {
 </script>
 
 <template>
+    <div class="container">
+        <div class="row">
+            <BookComponent v-for="book in store.books" :book="book" class="col-5" />
+        </div>
+    </div>
 </template>
 
 <style lang="scss" scoped>
