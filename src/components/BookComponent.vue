@@ -30,7 +30,7 @@
         <div class="card text-center mb-3 single-card p-3">
 
             <div class="card-header text-start">
-                #BookID: {{ book.title }}
+                #BookID: {{ book.id }}
             </div>
             <h2 class="card-title fw-bold pt-2 tracking-in-contract">
                 Title: {{ book.title }}
