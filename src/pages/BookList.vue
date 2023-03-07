@@ -13,7 +13,7 @@ export default {
     data() {
         return {
             store,
-            apiAddress: '127.0.0.1:8000'
+            apiAddress: 'http://127.0.0.1:8000'
         }
     },
 
@@ -24,8 +24,9 @@ export default {
             }
         })
         .then((response) => {
-            console.log(response.data.results.data);
-            store.books = response.data.results.data;
+            console.log(response);
+            store.books = response.data.results;
+            
         })
         .catch(function (error) {
             console.warn(error);
@@ -40,8 +41,8 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <div class="row">
+    <div class="container p-5">
+        <div class="row justify-content-around">
             <BookComponent v-for="book in store.books" :book="book" class="col-5" />
         </div>
     </div>

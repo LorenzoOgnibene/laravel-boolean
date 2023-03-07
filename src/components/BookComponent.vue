@@ -37,7 +37,7 @@
             </h2>
 
             <div class="card-body m-3">
-                <img src="" class="img-thumbnail" alt="book-img">
+                <img :src="book.cover_image" class="img-thumbnail" alt="book-img">
 
                 <p class="card-text pt-4 mb-3 fw-bold">
                     Description: {{ book.title }}
@@ -62,9 +62,7 @@
             </div>
 
             <div class="pt-2">
-                <!--cambiare la a con router link-->
-                <!--per la show inserire v-if="!isShow" :to="{name: 'book'}"-->
-                <router-link class="btn btn-dark"> 
+                <router-link class="btn btn-dark"  v-if="!isShow" :to="{name: 'book'}"> 
                     Show more
                 </router-link>
             </div>
