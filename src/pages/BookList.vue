@@ -42,7 +42,7 @@ export default {
 
 <template>
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-around">
             <h1 class="text-focus-in py-4 text-center">
                 Book List
             </h1>

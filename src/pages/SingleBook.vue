@@ -27,6 +27,7 @@ export default {
         .then((response) => {
             console.log(response.data.results);
             store.book = response.data.results;
+            console.log(store.book)
         })
         .catch(function (error) {
             console.warn(error);
@@ -35,7 +36,7 @@ export default {
     },
 
     created() {
-        this.getBooK();
+        this.getBook();
     },
 }
 </script>
@@ -43,7 +44,7 @@ export default {
 <template>
     <div class="container">
         <div class="row">
-            <BookComponent :book="book" class="col-12" />
+            <BookComponent :book="store.book" class="col-12" />
         </div>
     </div>
 </template>

@@ -62,7 +62,7 @@
             </div>
 
             <div class="pt-2">
-                <router-link class="btn btn-dark"  v-if="!isShow" :to="{name: 'book'}"> 
+                <router-link class="btn btn-dark"  v-if="!isShow" :to="{name: 'book', params: {id: book.id}}"> 
                     Show more
                 </router-link>
             </div>

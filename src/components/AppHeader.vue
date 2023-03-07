@@ -34,12 +34,12 @@ export default {
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="nav-link">
-                        <router-link :class="this.$route.name === 'home' ? 'active' : ''" :to="{ name: home }">
+                        <router-link :class="this.$route.name === 'home' ? 'active' : ''" :to="{ name: 'home' }">
                             Home
                         </router-link>
                     </li>
                     <li class="nav-link">
-                        <router-link :class="this.$route.name === 'books' ? 'active' : ''" :to="{ name: books }">
+                        <router-link :class="this.$route.name === 'books' ? 'active' : ''" :to="{ name: 'books' }">
                             Books
                         </router-link>
                     </li>
