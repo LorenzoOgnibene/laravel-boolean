@@ -37,11 +37,11 @@ export default {
                         Home
                     </router-link>
                 </li>
-                <!-- <li class="nav-link">
-                                    <router-link :to="{ name: books }">
-                                        Books
-                                    </router-link>
-                                </li> -->
+                <li class="nav-link">
+                    <router-link :class="this.$route.name === 'books' ? 'active' : ''" :to="{ name: books }">
+                        Books
+                    </router-link>
+                </li>
             </ul>
         </div>
     </nav>
@@ -50,5 +50,14 @@ export default {
 <style scoped lang="scss">
 img {
     width: 200px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.active {
+    color: red;
 }
 </style>
